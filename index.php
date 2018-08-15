@@ -6,7 +6,6 @@
 <body>
 <h1>Bonjour les amis</h1>
 <p>premier paragraphe de la page </p>
-<span>slt dembele</span>
-<div>Conflit resolut</div>
+<div>Encore une resolution d'un conflit</div>
 </body>
 </html>
