@@ -22,7 +22,7 @@
 					<label for="m">M</label>
 					<input type="radio" name="sexe" id="m">
 					<label for="f">F</label>
-					<input type="radio" name="f">
+					<input type="radio" name="sexe" id="f">
 				</div>
 			</form>
 		</div>
