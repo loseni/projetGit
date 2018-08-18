@@ -1,5 +1,5 @@
 (function() { 
-
+	
 	// On utilise une IEF pour ne pas polluer l'espace global
 
 	// Fonction de désactivation de l'affichage des « tooltips »
@@ -52,8 +52,7 @@
 		}
 	};
 
-	check['firstName'] = check['lastName']; // La fonction pour le
-	prénom est la même que celle du nom
+	check['firstName'] = check['lastName']; // La fonction pour le prénom est la même que celle du nom
 	check['age'] = function() {
 		var age = document.getElementById('age'),
 		tooltipStyle = getTooltip(age).style,
@@ -126,7 +125,7 @@
 	};
 	// Mise en place des événements
 	(function() { 
-		alert("ca marche");
+
 	    // Utilisation d'une fonction anonyme pour éviter les variables globales.
 		var myForm = document.getElementById('myForm'),
 		inputs = document.getElementsByTagName('input'),

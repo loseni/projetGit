@@ -84,8 +84,10 @@
 				<input type="submit" value="M'inscrire" /> <input type="reset"
 				value="Réinitialiser le formulaire" />
 		</form>
-
-		<script src="script.js" type="text/javascript"></script>
+		
+		<script src="script.js">
+			
+		</script>
 
    </body>
 
