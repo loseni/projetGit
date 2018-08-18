@@ -1,103 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Test git</title>
-	
-</head>
-<body>
-		<div class="container">
-			<form method="post" action="">
-				<div>
-					<span id="erreurNom"></span><br>
-					<label for="nom">Nom:</label>
-					<input type="text" name="nom" id="nom" style="outline: none;">
-				</div>
 
-				<div>
-					<span id="erreurPrenom"></span><br>
-					<label for="prenom">Prenom:</label>
-					<input type="text" name="prenom" id="prenom">
-				</div>
+	<head>
+		<title>Test git</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
 
-				<div>
-					<span id="erreurAge"></span><br>
-					<label for="age">Age:</label>
-					<input type="number" name="nom" id="age">
-				</div>
+	<body>
 
-				<div>
-					<label>Sexe:  </label>
-					<label for="m">M</label>
-					<input type="radio" name="sexe" id="m">
-					<label for="f">F</label>
-					<input type="radio" name="sexe" id="fi">
-				</div>
+		<form id="myForm">
+				<!--choix du sexe-->
+				<span class="form_col">Sexe :</span>
+				<label><input name="sex" type="radio" value="H"
+				/>Homme</label>
+				<label><input name="sex" type="radio" value="F"
+				/>Femme</label>
+				<span class="tooltip">Vous devez sélectionnez votre
+				sexe</span>
+				<br /><br />
 
-				<div>
-					<span id="erreurPseudo"></span><br>
-					<label for="pseudo">Pseudo:</label>
-					<input type="text" name="pseudo" id="pseudo">
-				</div>
+				<!-- saisir du nom -->
+				<label class="form_col" for="lastName">Nom :</label>
+				<input name="lastName" id="lastName" type="text" />
+				<span class="tooltip">Un nom ne peut pas faire moins de 2
+				caractères</span>
+				<br /><br />
 
-				<div>
-					<span id="erreurMotDePasse"></span><br>
-					<label for="motDePasse">Mot de passe:</label>
-					<input type="password" name="motDePasse" id="motDePasse">
-				</div>
+				<!--saisir du prenom -->
+				<label class="form_col" for="firstName">Prénom :</label>
+				<input name="firstName" id="firstName" type="text" />
+				<span class="tooltip">Un prénom ne peut pas faire moins de 2 caractères</span>
+				<br /><br />
 
-				<div>
-					<span id="erreurConfirmeMotDePasse"></span><br>
-					<label for="confirmeMotDePasse">Mot de passe(confirmation):</label>
-					<input type="password" name="confirmeMotDePasse" id="confirmeMotDePasse">
-				</div>
-				<div>
-					<span id="erreurPays"></span><br>
-					<label for="pays">Pays:</label>
-					<select name="pays" id="pays">
-						<option>Choisir pays</option>
-						<option>cote d'ivoire</option>
-						<option>france</option>
-						<option>USA</option>
-					</select>
-				</div>
+				<!-- saisir de l'age-->
+				<label class="form_col" for="age">Âge :</label>
+				<input name="age" id="age" type="text" />
+				<span class="tooltip">L'âge doit être compris entre 5 et 140</span>
+				<br /><br />
 
-				<div>
-					<label>Souhaitez-vous recevoir des mails ? </label>
-					<input type="checkbox" name="recevoirMail">
-				</div>
+				<!--saisir du pseudo -->
+				<label class="form_col" for="login">Pseudo :</label>
+				<input name="login" id="login" type="text" />
+				<span class="tooltip">Le pseudo ne peut pas faire moins de 4 caractères
+				</span>
+				<br /><br />
 
-				<div><input type="submit" name="Envoyer" value="Envoyer" id="Envoyer"></div>
-			</form>
-		</div>
+				<!--saisir du mot de passe -->
+				<label class="form_col" for="pwd1">Mot de passe :</label>
+				<input name="pwd1" id="pwd1" type="password" />
+				<span class="tooltip">Le mot de passe ne doit pas faire moins de 6 caractères</span>
+				<br /><br />
 
-<!--Verification des informations contenu dans le formulaire-->
-			
-			<script type="text/javascript">
-				var btnEnvoyer=document.getElementById("Envoyer");
-				//variables pour les erreurs
-				var erreurNom=document.getElementById("erreurNom");
-				var erreurPrenom=document.getElementById("erreurPrenom");
-				var erreurPseudo=document.getElementById("erreurPseudo");
-				var erreurAge =document.getElementById("erreurAge");
-				var erreurMotDePasse=document.getElementById("erreurMotDePasse");
-				var erreurConfirmeMotDePasse=document.getElementById("erreurConfirmeMotDePasse");
-				var erreurPays=document.getElementById("erreurPays");
+				<!--confirmation du mot de passe -->
+				<label class="form_col" for="pwd2">Mot de passe (confirmation)
+				:</label>
+				<input name="pwd2" id="pwd2" type="password" />
+				<span class="tooltip">Le mot de passe de confirmation doit
+				être identique à celui d'origine</span>
+				<br /><br />
 
-				//variable des champs de saisir
-				var nom=document.getElementById('nom'),
-					prenom=document.getElementById('prenom'),
-					age=document.getElementById('age'),
-					pseudo=document.getElementById('pseudo'),
-					motDePasse=document.getElementById('motDePasse'),
-					confirmeMotDePasse=document.getElementById('confirmeMotDePasse');
-					pays=document.getElementById('pays');
+				<!--choix du pays de residence -->
+				<label class="form_col" for="country">Pays :</label>
+				<select name="country" id="country">
+				<option value="none">Sélectionnez votre pays de
+				résidence</option>
+				<option value="en">Angleterre</option>
+				<option value="us">États-Unis</option>
+				<option value="fr">France</option>
+				</select>
+				<span class="tooltip">Vous devez sélectionner votre pays de
+				résidence</span>
+				<br /><br />
 
+				<!--Envoyer un mail si l'utilisateur le desire -->
+				<span class="form_col"></span>
+				<label><input name="news" type="checkbox" /> Je désire
+				recevoir la newsletter chaque mois.</label>
+				<br /><br />
 
-				btnEnvoyer.addEventListener(btnEnvoyer,"click" ,function(){
+				<!--bouttons d'envoi et d'annulation du formulaire -->
+				<span class="form_col"></span>
+				<input type="submit" value="M'inscrire" /> <input type="reset"
+				value="Réinitialiser le formulaire" />
+		</form>
 
-						if(nom.value==="" ||nom.leng)
-				},true);
-			</script>
+		<script src="script.js" type="text/javascript"></script>
 
-</body>
+   </body>
+
 </html>
