@@ -126,7 +126,7 @@
 	};
 	// Mise en place des événements
 	(function() { 
-
+		alert("ca marche");
 	    // Utilisation d'une fonction anonyme pour éviter les variables globales.
 		var myForm = document.getElementById('myForm'),
 		inputs = document.getElementsByTagName('input'),
