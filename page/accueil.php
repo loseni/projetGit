@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>application d'AJAX</title>
+	<meta http-equiv="content-Type" content="text/html" charset="utf-8">
 </head>
 <body>
 
@@ -10,8 +11,8 @@
 	</p>
 
 	<p>
-		<input type="button" value="page/fichier1.txt">
-		<input type="button" value="page/fichier2.txt">
+		<input type="button" value="http://localhost:8080/projetGit/page/fichier1.txt">
+		<input type="button" value="http://localhost:8080/projetGit/page/fichier2.txt">
 	</p>
 
 	<p id="fileContent">
