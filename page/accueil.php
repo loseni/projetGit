@@ -10,8 +10,8 @@
 	</p>
 
 	<p>
-		<input type="button" value="fichier1.txt">
-		<input type="button" value="fichier2.txt">
+		<input type="button" value="page/fichier1.txt">
+		<input type="button" value="page/fichier2.txt">
 	</p>
 
 	<p id="fileContent">
