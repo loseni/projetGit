@@ -17,5 +17,7 @@
 	<p id="fileContent">
 		<span>Aucun fichier charge</span>
 	</p>
+
+	<script type="text/javascript" src="ajax.js"></script>
 </body>
 </html>
