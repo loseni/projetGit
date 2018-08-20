@@ -19,6 +19,26 @@
 		<span>Aucun fichier charge</span>
 	</p>
 
-	<script type="text/javascript" src="ajax.js"></script>
+	<iframe src="fichier2.txt" name="frame" id="frame" onload="trigger()"></iframe>
+
+	<p>dddddddddddddddddddddddddddddddddddddddddddddddddd <br>999999999999999999999999</p>
+
+	<script type="text/javascript">
+		
+		function trigger()
+		{
+			var frame=document.getElementById("frame");
+				frame= frame.contentDocument|| frame.document;
+				alert("page charge");
+
+		}
+
+
+	</script>
+
+	<script type="text/javascript">
+		
+		window.top.window.trigger();
+	</script>
 </body>
 </html>
