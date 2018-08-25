@@ -5,25 +5,10 @@
 
 </head>
 <body>
-	<canvas id="canvas" width="150" height="150">
-<p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à
-jour</p>
-</canvas>
 	<script type="text/javascript">
-		var canvas = document.querySelector('#canvas');
-		var context = canvas.getContext('2d');
-		context.beginPath(); // Le cercle extérieur
-		context.arc(75, 75, 50, 0, Math.PI * 2); // Ici le calcul estsimplifié
-		context.stroke();
-		context.beginPath(); // La bouche, un arc de cercle
-		context.arc(75, 75, 40, 0, Math.PI); // Ici aussi
-		context.fill();
-		context.beginPath(); // L'œil gauche
-		context.arc(55, 70, 20, (Math.PI / 180) * 220, (Math.PI / 180) *320);
-		context.stroke();
-		context.beginPath(); // L'œil droit
-		context.arc(95, 70, 20, (Math.PI / 180) * 220, (Math.PI / 180) *320);
-		context.stroke();
+		
+		var operation ="2 + 2 * 8 -3";
+			console.log(eval(operation));
 	</script>
 </body>
 </html>
